@@ -19,7 +19,8 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve false
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -44,9 +45,13 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2"
 
         compile ':mongodb:1.2.0'
-        compile ':less-resources:1.3.3.1'
+        compile ':less-resources:1.3.3.1' {
+            excludes 'resources'
+        }
         runtime ':twitter-bootstrap:2.3.0'
-        runtime ':handlebars-resources:1.0'
+        runtime(':handlebars-resources:1.0') {
+            excludes 'resources'
+        }
         compile ":coffeescript-resources:0.3.8"
         compile ":twitter-bootstrap:2.3.0"
         compile ":underscore:1.4.4"
