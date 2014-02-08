@@ -45,3 +45,6 @@
 *.iml
 
 /.idea
+
+/breadless-web/*.iml
+/breadless-web/.idea
