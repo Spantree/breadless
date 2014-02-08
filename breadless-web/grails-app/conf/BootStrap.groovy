@@ -31,16 +31,16 @@ class BootStrap {
         }
 
         def turkey = Ingredient.findByName("Turkey") ?: new Ingredient(name: "Turkey", type: IngredientType.MEAT).save()
-        def ham = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Ham", type: IngredientType.MEAT).save()
-        def bologna = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Bologna", type: IngredientType.MEAT).save()
-        def americanCheese = Ingredient.findByName("Turkey") ?:new Ingredient(name: "American Cheese", type: IngredientType.MEAT).save()
-        def pickles = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Pickles", type: IngredientType.MEAT).save()
-        def lettuce = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Lettuce", type: IngredientType.MEAT).save()
-        def tomatoes =Ingredient.findByName("Turkey") ?: new Ingredient(name: "Tomatoes", type: IngredientType.MEAT).save()
-        def onions = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Onions", type: IngredientType.MEAT).save()
-        def provolone = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Provolone", type: IngredientType.MEAT).save()
-        def mayonnaise = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Mayonnaise", type: IngredientType.MEAT).save()
-        def mustard = Ingredient.findByName("Turkey") ?:new Ingredient(name: "Mustard", type: IngredientType.MEAT).save()
+        def ham = Ingredient.findByName("Ham") ?:new Ingredient(name: "Ham", type: IngredientType.MEAT).save()
+        def bologna = Ingredient.findByName("Bologna") ?:new Ingredient(name: "Bologna", type: IngredientType.MEAT).save()
+        def americanCheese = Ingredient.findByName("American Cheese") ?:new Ingredient(name: "American Cheese", type: IngredientType.CHEESE).save()
+        def pickles = Ingredient.findByName("Pickles") ?:new Ingredient(name: "Pickles", type: IngredientType.VEGGIES).save()
+        def lettuce = Ingredient.findByName("Lettuce") ?:new Ingredient(name: "Lettuce", type: IngredientType.VEGGIES).save()
+        def tomatoes =Ingredient.findByName("Tomatoes") ?: new Ingredient(name: "Tomatoes", type: IngredientType.VEGGIES).save()
+        def onions = Ingredient.findByName("Onions") ?:new Ingredient(name: "Onions", type: IngredientType.VEGGIES).save()
+        def provolone = Ingredient.findByName("Provolone") ?:new Ingredient(name: "Provolone", type: IngredientType.CHEESE).save()
+        def mayonnaise = Ingredient.findByName("Mayonnaise") ?:new Ingredient(name: "Mayonnaise", type: IngredientType.CONDIMENTS).save()
+        def mustard = Ingredient.findByName("Mustard") ?:new Ingredient(name: "Mustard", type: IngredientType.CONDIMENTS).save()
 
         def originalComp = new Competition(name: "Original").save()
 
