@@ -12,7 +12,8 @@
         App.module(App.appModule).start()
 
   App.on "initialize:after", ->
-    @startHistory()
-    #@navigate(@rootRoute, trigger: true) unless @getCurrentRoute()
+    Backbone.history.start({pushState: true})
 
   App
+
+@Breadless.start()

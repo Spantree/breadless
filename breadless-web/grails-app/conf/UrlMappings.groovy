@@ -2,10 +2,9 @@ class UrlMappings {
 
 	static mappings = {
 
-        "sandwich/$id?" {
-            controller = 'sandwichController'
+        "/sandwich/$id?" {
+            controller = 'sandwich'
             action = [GET: 'show']
-            parseRequest = true
         }
 
 		"/"(view:"/index")

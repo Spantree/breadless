@@ -22,7 +22,7 @@ modules = {
     }
 
     baseApp {
-        dependsOn "backbonejs, underscorestring, marionettejs"
+        dependsOn "backbonejs, marionettejs"
         resource url: 'coffee/app.coffee'
     }
 

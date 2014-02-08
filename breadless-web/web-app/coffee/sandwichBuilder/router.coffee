@@ -1,12 +1,13 @@
-@RedParrot.module "SandwichBuilder", (SandwichBuilder, App, Backbone, Marionette, $, _) ->
+@Breadless.module "SandwichBuilder", (SandwichBuilder, App, Backbone, Marionette, $, _) ->
   @startWithParent = false
 
   class SandwichBuilder.Router extends Marionette.AppRouter
     appRoutes:
       "sandwich/:id" : "show"
+      "sandwich/" : "show"
 
   API =
-    show: ->
+    show: (id)->
       console.log "show"
 
   SandwichBuilder.on "start", ->

@@ -2,6 +2,7 @@ package net.spantree.breadless.sandwich
 
 import grails.converters.JSON
 import net.spantree.breadless.Competition
+import net.spantree.breadless.Ingredient
 import net.spantree.breadless.Sandwich
 
 class SandwichController {
@@ -11,7 +12,9 @@ class SandwichController {
 
         withFormat {
             html {
-               render view:""
+               render view:"edit", model: [
+                   id: params.id
+               ]
             }
 
             json {

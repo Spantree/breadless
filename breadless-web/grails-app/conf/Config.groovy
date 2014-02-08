@@ -94,3 +94,5 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'net.spantree.breadless.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'net.spantree.breadless.UserRole'
 grails.plugins.springsecurity.authority.className = 'net.spantree.breadless.Role'
+
+grails.app.context='/'
