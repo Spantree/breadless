@@ -13,7 +13,7 @@ class SandwichController {
 
         withFormat {
             html {
-               render view:"edit", model: [
+               render view: "edit", model: [
                    id: params.id
                ]
             }

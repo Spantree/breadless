@@ -16,4 +16,5 @@
 
   App
 
-@Breadless.start()
+$(document).ready =>
+  @Breadless.start()
