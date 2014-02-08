@@ -1,0 +1,30 @@
+forge 'http://forge.puppetlabs.com'
+
+mod 'puppetlabs/apt', '1.2.0'
+mod 'puppetlabs/firewall', '0.4.0'
+mod 'puppetlabs/mysql', '0.9.0'
+mod 'puppetlabs/stdlib', '4.1.0'
+
+mod 'maestrodev/sonar', '1.0.2'
+
+mod 'smarchive/gradle', '0.1.2'
+mod 'smarchive/archive', '0.1.1'
+
+mod 'portertech/mongodb', '0.1.2'
+
+mod 'spantree/nginx', '0.0.2'
+mod 'jenkins',
+	:git => 'git://github.com/Spantree/puppet-jenkins.git'
+
+mod 'luxflux/openvpn', '2.1.0'
+
+mod 'Flameeyes/sysctl', '0.2.0'
+mod 'saz/resolv_conf', '1.0.3'
+
+mod 'thomasvandoren/redis', '0.0.9'
+
+mod 'jboss', :git => 'git://github.com/example42/puppet-jboss.git'
+mod 'upstart',
+	:git => 'https://github.com/bison/puppet-upstart'
+
+mod 's3cmd', :git => 'https://github.com/mattmcmanus/puppet-s3cmd.git'
