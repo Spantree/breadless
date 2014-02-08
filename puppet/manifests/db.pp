@@ -20,10 +20,6 @@ node /(.*breadless.*)/ {
     version => '0.90.3',
   }
 
-   class { 'redis':
-      version => '2.6.5',
-  }
-
   if $host_environment == 'Vagrant' {
     host { 'db.dev.breadless.internal':
       ensure       => present,

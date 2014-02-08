@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :db do |db|
     db.vm.hostname = "db.dev.breadless.local"
     db.vm.provider :virtualbox do |v, override|
-      override.vm.network :private_network, ip: "192.168.120.101"
+      override.vm.network :private_network, ip: "192.168.123.123"
       v.customize ["modifyvm", :id, "--memory", 4096]
     end
     db.vm.provider :vmware_fusion do |v, override|
