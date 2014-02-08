@@ -1,0 +1,21 @@
+#main-region {
+    padding: 0;
+}
+
+ul.sandwich-ingredients-list
+{
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.sandwich-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bread {
+    background-color: beige
+}

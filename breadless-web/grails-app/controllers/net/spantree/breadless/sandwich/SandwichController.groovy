@@ -1,6 +1,7 @@
 package net.spantree.breadless.sandwich
 
 import grails.converters.JSON
+import grails.plugins.springsecurity.SpringSecurityService
 import net.spantree.breadless.Competition
 import net.spantree.breadless.Entry
 import net.spantree.breadless.Ingredient
@@ -8,6 +9,7 @@ import net.spantree.breadless.Sandwich
 
 class SandwichController {
     def ingredientService
+    SpringSecurityService springSecurityService
 
     def show = {
 
@@ -36,7 +38,7 @@ class SandwichController {
     def submit = {
         def competition = Competition.findByName("Original") // Competition.findById(params.id)
         def name = params.name
-        def creator = getAuthenticationUser()
+        def creator = springSecurityService.currentUser
         def ingredients = params.ingredients.collect {
             Ingredient.findByName(it)
         }
