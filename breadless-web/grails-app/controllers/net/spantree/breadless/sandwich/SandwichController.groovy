@@ -2,6 +2,7 @@ package net.spantree.breadless.sandwich
 
 import grails.converters.JSON
 import net.spantree.breadless.Competition
+import net.spantree.breadless.Entry
 import net.spantree.breadless.Ingredient
 import net.spantree.breadless.Sandwich
 
@@ -25,7 +26,6 @@ class SandwichController {
                     json = [msg: 'Sandwich not found']
                 } else {
                     json << [creator: sandwich.creator]
-                    json << [competition: sandwich.competition.id]
                     json << [ingredients: ingredientService.formatIngredients(sandwich.ingredients)]
                 }
                 render json as JSON
@@ -43,12 +43,12 @@ class SandwichController {
 
         def sandwich = new Sandwich(
                 name: name,
-                competition: competition,
                 creator: creator,
                 ingredients: ingredients
         )
 
         sandwich.save()
+        new Entry(competition: competition, sandwich: sandwich).save()
         def json = [message: "Saved sandwich with id ${sandwich.id}"]
         render json as JSON
     }
