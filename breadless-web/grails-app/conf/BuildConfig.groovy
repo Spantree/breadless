@@ -41,7 +41,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ":jquery:1.8.3"
+        //runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
 
         compile ':mongodb:1.2.0'
@@ -53,8 +53,8 @@ grails.project.dependency.resolution = {
             excludes 'resources'
         }
         compile ":coffeescript-resources:0.3.8"
-        compile ":twitter-bootstrap:2.3.0"
-        compile ":underscore:1.4.4"
+        //compile ":twitter-bootstrap:3.1.0"
+        compile ":underscore:1.5.2"
 
         build ":tomcat:$grailsVersion"
 
