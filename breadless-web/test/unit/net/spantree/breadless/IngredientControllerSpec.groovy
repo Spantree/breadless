@@ -20,7 +20,7 @@ class IngredientControllerSpec extends Specification {
         controller.response.format = 'json'
     }
 
-   def "Should show pepperoni as a meat"(){
+   def "Should show ingredients in the correct category"(){
         when: "read the ingredients list"
         controller.list()
         def res = controller.response.contentAsString
