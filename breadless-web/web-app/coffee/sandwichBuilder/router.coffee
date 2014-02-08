@@ -8,7 +8,10 @@
 
   API =
     show: (id)->
-      console.log "show"
+      console.log "show #{id}"
+      new SandwichBuilder.Main.Controller
+        region: App.mainRegion
+
 
   SandwichBuilder.on "start", ->
     new SandwichBuilder.Router

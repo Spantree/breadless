@@ -11,8 +11,8 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <h2>Sandwich Builder</h2>
+                <div class="col-lg-4" id="main-region">
+
                 </div>
             </div>
         </div>

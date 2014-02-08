@@ -30,6 +30,7 @@ modules = {
         dependsOn "baseApp"
 
         resource url: 'coffee/sandwichBuilder/router.coffee'
+        resource url: 'coffee/sandwichBuilder/controllers/SandwichBuilderController.coffee'
     }
 
     application {
