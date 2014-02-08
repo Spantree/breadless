@@ -45,16 +45,16 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ":jquery:1.8.3"
+        //runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
 
         compile ':mongodb:1.2.0'
         compile ':less-resources:1.3.3.1'
-        runtime ':twitter-bootstrap:2.3.0'
-        runtime ':handlebars-resources:1.0'
+        //runtime ':twitter-bootstrap:2.3.0'
+        runtime ':handlebars-resources:1.0.1'
         compile ":coffeescript-resources:0.3.8"
-        compile ":twitter-bootstrap:2.3.0"
-        compile ":underscore:1.4.4"
+        //compile ":twitter-bootstrap:3.1.0"
+        compile ":underscore:1.5.2"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
