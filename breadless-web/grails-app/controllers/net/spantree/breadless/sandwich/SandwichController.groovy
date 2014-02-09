@@ -28,6 +28,7 @@ class SandwichController {
                     json = [msg: 'Sandwich not found']
                 } else {
                     json << [
+                            name: sandwich.name,
                             creator: [id: sandwich.creator.id, username: sandwich.creator.username],
                             ingredients: ingredientService.formatIngredients(sandwich.ingredients)
                     ]

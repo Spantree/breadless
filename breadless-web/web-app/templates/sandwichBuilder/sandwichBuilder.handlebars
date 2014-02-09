@@ -1,19 +1,26 @@
-<ul class="sandwich-ingredients-list">
-    <li class="sandwich-item bread">Bread</li>
+<div class="sandwich-form-container">
+    <form role="form" class="sandwich-form">
+        <label for="sandwich-name">Name:</label> &nbsp;
+        <input id="sandwich-name" placeholder="Enter sandwich name" value="{{name}}" />
 
-    {{#each ingredients}}
-        <li>{{this.name}}</li>
-    {{/each}}
-        <li>
-            <select class="ingredient-select">
-                <option value="">--select ingredient--</option>
-                {{#each possibleIngredients}}
-                <option value="{{this.name}}">{{this.type}} - {{this.name}}</option>
+    </form>
+    <ul class="sandwich-ingredients-list">
+        <li class="sandwich-item bread">Bread</li>
 
-                {{/each}}
-            </select>
-        </li>
-    <li class="sandwich-item bread">Bread</li>
-</ul>
+        {{#each ingredients}}
+            <li>{{this.name}}</li>
+        {{/each}}
+            <li>
+                <select class="ingredient-select">
+                    <option value="">--select ingredient--</option>
+                    {{#each possibleIngredients}}
+                    <option value="{{this.name}}">{{this.type}} - {{this.name}}</option>
 
-<button id="save-sandwich" type="button">Save</button>
+                    {{/each}}
+                </select>
+            </li>
+        <li class="sandwich-item bread">Bread</li>
+    </ul>
+
+    <button id="save-sandwich" type="button" class="btn btn-default save-sandwich-btn">Save</button>
+</div>

@@ -6,9 +6,18 @@ ul.sandwich-ingredients-list
 {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+
+}
+
+.sandwich-form-container {
     margin: auto;
     margin-top: 50px;
     width: 500px;
+}
+
+.sandwich-form {
+    width: 100%;
 }
 
 .ingredient-select {
@@ -19,6 +28,10 @@ ul.sandwich-ingredients-list
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
+}
+
+.save-sandwich-btn {
+    margin-left: 235px;
 }
 
 .bread {

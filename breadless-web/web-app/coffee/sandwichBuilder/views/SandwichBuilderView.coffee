@@ -27,4 +27,6 @@
 
 
     save: ->
+      console.log $('#sandwich-name').val()
+      @model.set('name', $('#sandwich-name').val())
       @model.save({})
