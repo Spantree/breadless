@@ -7,7 +7,7 @@
     </head>
 	<body>
         <div class="jumbotron">
-            <img src="/images/logo.png"/>
+            <h1>Huzzah!</h1>
             <p class="lead">Never worry about lunch again!</p>
             <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up now</a></p>
         </div>

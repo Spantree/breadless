@@ -14,6 +14,7 @@
 	</head>
 	<body>
         <div class="container">
+            <img src="/images/logo.png" style="height:40px; margin-bottom: 10px"/>
             <div class="masthead">
                 <ul class="nav nav-justified">
                     <g:if test="${request.forwardURI == '/'}">
