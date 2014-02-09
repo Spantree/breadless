@@ -24,8 +24,6 @@
                         <li>
                     </g:else>
                     <a href="/">Home</a></li>
-                    <li><a href="#">Sign up</a></li>
-
 
                     <g:if test="${request.forwardURI =~ /\/sandwich\/vote\//}">
                         <li class="active">
