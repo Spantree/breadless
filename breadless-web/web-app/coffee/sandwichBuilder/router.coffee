@@ -11,6 +11,7 @@
       console.log "show #{id}"
       new SandwichBuilder.Main.Controller
         region: App.mainRegion
+        id: id
 
 
   SandwichBuilder.on "start", ->

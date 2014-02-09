@@ -5,4 +5,4 @@
     defaults:
       creator: ''
       msg: ''
-      ingredients: {}
+      ingredients: []

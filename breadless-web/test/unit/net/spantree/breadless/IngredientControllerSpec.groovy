@@ -3,6 +3,7 @@ package net.spantree.breadless
 import grails.converters.JSON
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
+import net.spantree.breadless.sandwich.IngredientController
 import spock.lang.Specification
 
 @TestFor(IngredientController)

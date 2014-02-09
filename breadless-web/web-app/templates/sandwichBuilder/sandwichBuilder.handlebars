@@ -1,8 +1,18 @@
 <ul class="sandwich-ingredients-list">
     <li class="sandwich-item bread">Bread</li>
+
     {{#each ingredients}}
-        <li>{{this}}</li>
+        <li>{{this.name}}</li>
     {{/each}}
+        <li>
+            <select class="ingredient-select">
+                <option value="">--select ingredient--</option>
+                {{#each possibleIngredients}}
+                <option value="{{this.name}}">{{this.type}} - {{this.name}}</option>
+
+                {{/each}}
+            </select>
+        </li>
     <li class="sandwich-item bread">Bread</li>
 </ul>
 

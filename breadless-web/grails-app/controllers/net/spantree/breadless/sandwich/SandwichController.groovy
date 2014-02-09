@@ -21,14 +21,17 @@ class SandwichController {
             }
 
             json {
-                def id = params.id
-                def sandwich = Sandwich.findById(id)
+                def id = params.id as Integer
+                def sandwich = Sandwich.get(id)
                 def json = [:]
                 if (!sandwich) {
                     json = [msg: 'Sandwich not found']
                 } else {
-                    json << [creator: [id: sandwich.creator.id, username: sandwich.creator.username]]
-                    json << [ingredients: ingredientService.formatIngredients(sandwich.ingredients)]
+                    json << [
+                            creator: [id: sandwich.creator.id, username: sandwich.creator.username],
+                            ingredients: ingredientService.formatIngredients(sandwich.ingredients)
+                    ]
+                    //json << [ingredients: ingredientService.formatIngredients(sandwich.ingredients)]
                 }
                 render json as JSON
             }
@@ -37,21 +40,30 @@ class SandwichController {
 
     def submit = {
         def competition = Competition.findByName("Original") // Competition.findById(params.id)
-        def name = params.name
+        def json = request.JSON
+        def name = json.name
         def creator = springSecurityService.currentUser
-        def ingredients = params.ingredients.collect {
-            Ingredient.findByName(it)
+        def ingredientNames = json.ingredients
+        def ingredients = ingredientNames.collect {
+            Ingredient.findByName(it.name)
         }
 
-        def sandwich = new Sandwich(
-                name: name,
-                creator: creator,
-                ingredients: ingredients
-        )
+        Sandwich sandwich
+        if(json.id) {
+           sandwich = Sandwich.get(json.id as Integer)
+        }
+        else {
+            sandwich = new Sandwich()
+        }
+
+        sandwich.name = name?: ''
+        sandwich.creator = creator
+        sandwich.ingredients = ingredients?:[]
 
         sandwich.save()
+
         new Entry(competition: competition, sandwich: sandwich).save()
-        def json = [message: "Saved sandwich with id ${sandwich.id}"]
-        render json as JSON
+        def result = [message: "Saved sandwich with id ${sandwich.id}"]
+        render result as JSON
     }
 }

@@ -11,11 +11,17 @@ ul.sandwich-ingredients-list
     width: 500px;
 }
 
+.ingredient-select {
+    margin-left: 150px;
+}
+
 .sandwich-item {
     margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
 }
 
 .bread {
-    background-color: beige
+    background-color: beige;
+    line-height: 50px;
 }
