@@ -21,20 +21,33 @@ ul.sandwich-ingredients-list
 }
 
 .ingredient-select {
-    margin-left: 150px;
+
 }
 
 .sandwich-item {
     margin-bottom: 20px;
     margin-top: 20px;
+    line-height: 25px;
     text-align: center;
+    border: gray 1px solid
 }
 
 .save-sandwich-btn {
-    margin-left: 235px;
+    margin-left: 220px;
 }
 
 .bread {
     background-color: beige;
     line-height: 50px;
+    border: rgb(199, 179, 144) 1px solid
+}
+
+.bread:first-child {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.bread:last-child {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
 }

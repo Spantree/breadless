@@ -1,6 +1,5 @@
 <div class="sandwich-form-container">
     <form role="form" class="sandwich-form">
-        <label for="sandwich-name">Name:</label> &nbsp;
         <input id="sandwich-name" placeholder="Enter sandwich name" value="{{name}}" />
 
     </form>
@@ -8,11 +7,11 @@
         <li class="sandwich-item bread">Bread</li>
 
         {{#each ingredients}}
-            <li>{{this.name}}</li>
+            <li class="sandwich-item">{{this.name}}</li>
         {{/each}}
             <li>
-                <select class="ingredient-select">
-                    <option value="">--select ingredient--</option>
+                <select class="form-control ingredient-select">
+                    <option value="">-- Pick an ingredient --</option>
                     {{#each possibleIngredients}}
                     <option value="{{this.name}}">{{this.type}} - {{this.name}}</option>
 
