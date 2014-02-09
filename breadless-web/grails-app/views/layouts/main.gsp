@@ -27,9 +27,15 @@
                     <li><a href="#">Sign up</a></li>
 
 
-                    <li><a href="#">Vote</a></li>
+                    <g:if test="${request.forwardURI =~ /\/sandwich\/vote\//}">
+                        <li class="active">
+                    </g:if>
+                    <g:else>
+                        <li>
+                    </g:else>
+                    <a href="/sandwich/vote/">Vote</a></li>
 
-                    <g:if test="${request.forwardURI =~ /\/sandwich\/[0-9]*/}">
+                    <g:if test="${request.forwardURI =~ /\/sandwich\/[0-9]*$/}">
                         <li class="active">
                     </g:if>
                     <g:else>

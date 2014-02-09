@@ -2,6 +2,12 @@ class UrlMappings {
 
 	static mappings = {
 
+        "/sandwich/vote" {
+            //controller = 'sandwich'
+            //action = [GET: 'show', POST: 'submit', PUT: 'submit']
+            view = '/index'
+        }
+
         "/sandwich/$id?" {
             controller = 'sandwich'
             action = [GET: 'show', POST: 'submit', PUT: 'submit']
