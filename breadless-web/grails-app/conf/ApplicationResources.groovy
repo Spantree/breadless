@@ -39,6 +39,21 @@ modules = {
         resource url: 'css/sandwichBuilder/sandwichBuilder.css'
     }
 
+    sandwichListerApp {
+        dependsOn "baseApp"
+
+        resource url: 'coffee/sandwichLister/router.coffee'
+        resource url: 'coffee/sandwichLister/controllers/SandwichListController.coffee'
+        resource url: 'coffee/sandwichLister/models/SandwichListModel.coffee'
+
+    }
+
+    sandwichVoterApp {
+        depends on "baseApp"
+
+        resource url: 'coffee/sandwichVoter/'
+    }
+
     application {
          dependsOn 'bootstrap'
          resource url: 'css/main.css'
