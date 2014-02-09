@@ -5,7 +5,7 @@ class UrlMappings {
         "/sandwich/vote" {
             //controller = 'sandwich'
             //action = [GET: 'show', POST: 'submit', PUT: 'submit']
-            view = '/index'
+            view = '/sandwich/vote'
         }
 
         "/sandwich/$id?" {

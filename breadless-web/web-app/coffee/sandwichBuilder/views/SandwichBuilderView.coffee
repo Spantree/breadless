@@ -23,10 +23,10 @@
       ingredients = @model.get('ingredients')
       ingredients.push { name: item.target.value }
       @model.set('ingredients', ingredients)
+      @model.set('name', $('#sandwich-name').val())
       @model.trigger 'change'
 
 
     save: ->
-      console.log $('#sandwich-name').val()
       @model.set('name', $('#sandwich-name').val())
       @model.save({})
