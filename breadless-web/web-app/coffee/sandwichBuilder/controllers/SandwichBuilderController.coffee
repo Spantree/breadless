@@ -4,13 +4,17 @@
     initialize: (options) ->
       @region = options.region
 
-      if options.id?
-        @model = new Main.SandwichModel(options.id)
-        @model.fetch()
-      else
-        @model = new Main.SandwichModel(options.id)
+      ingredients = new Main.SandwichIngredientsCollection()
+      ingredients.fetch
+        success: ()=>
+          if options.id?
+            @model = new Main.SandwichModel({"id":options.id})
+            @model.fetch()
+          else
+            @model = new Main.SandwichModel()
 
-      @view = new Main.SandwichBuilderView
-        model: @model
+          @view = new Main.SandwichBuilderView
+            model: @model
+            ingredients: ingredients
 
-      @region.show @view
+          @region.show @view

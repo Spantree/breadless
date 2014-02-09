@@ -4,12 +4,29 @@
     template: (obj) ->
       Handlebars.templates['templates/sandwichBuilder/sandwichBuilder'](obj)
 
+    initialize: (options)->
+      @model = options.model
+      @ingredients = options.ingredients
+
+      @model.on 'change', @render, @
+
     events:
         "click #save-sandwich": "save"
+        "change .ingredient-select": "addIngredient"
 
-    initialize: (options)->
-      console.log "view start"
+    serializeData: ()->
+        obj = @model.toJSON()
+        obj.possibleIngredients = @ingredients.toJSON()
+        obj
+
+    addIngredient: (item)->
+      ingredients = @model.get('ingredients')
+      ingredients.push { name: item.target.value }
+      @model.set('ingredients', ingredients)
+      @model.trigger 'change'
+
 
     save: ->
+      console.log $('#sandwich-name').val()
+      @model.set('name', $('#sandwich-name').val())
       @model.save({})
-      console.log "save"

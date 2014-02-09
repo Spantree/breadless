@@ -14,12 +14,32 @@
 	</head>
 	<body>
         <div class="container">
+            <img src="/images/logo.png" style="height:40px; margin-bottom: 10px"/>
             <div class="masthead">
-                <h3 class="text-muted">Breadless</h3>
                 <ul class="nav nav-justified">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Sign up</a></li>
-                    <li><a href="#">Vote</a></li>
+                    <g:if test="${request.forwardURI == '/'}">
+                        <li class="active">
+                    </g:if>
+                    <g:else>
+                        <li>
+                    </g:else>
+                    <a href="/">Home</a></li>
+
+                    <g:if test="${request.forwardURI =~ /\/sandwich\/vote\//}">
+                        <li class="active">
+                    </g:if>
+                    <g:else>
+                        <li>
+                    </g:else>
+                    <a href="/sandwich/vote/">Vote</a></li>
+
+                    <g:if test="${request.forwardURI =~ /\/sandwich\/[0-9]*$/}">
+                        <li class="active">
+                    </g:if>
+                    <g:else>
+                        <li>
+                    </g:else>
+                    <a href="/sandwich/">Make sammich!</a></li>
                 </ul>
             </div>
             <g:layoutBody/>

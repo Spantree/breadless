@@ -31,6 +31,8 @@ modules = {
 
         resource url: 'coffee/sandwichBuilder/router.coffee'
         resource url: 'coffee/sandwichBuilder/controllers/SandwichBuilderController.coffee'
+
+        resource url: 'coffee/sandwichBuilder/models/SandwichIngredientsCollection.coffee'
         resource url: 'coffee/sandwichBuilder/models/SandwichModel.coffee'
         resource url: 'coffee/sandwichBuilder/views/SandwichBuilderView.coffee'
         resource url: 'templates/sandwichBuilder/sandwichBuilder.handlebars'

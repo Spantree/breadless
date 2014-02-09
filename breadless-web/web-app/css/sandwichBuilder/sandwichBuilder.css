@@ -6,16 +6,48 @@ ul.sandwich-ingredients-list
 {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+
+}
+
+.sandwich-form-container {
     margin: auto;
     margin-top: 50px;
     width: 500px;
 }
 
+.sandwich-form {
+    width: 100%;
+}
+
+.ingredient-select {
+
+}
+
 .sandwich-item {
     margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 25px;
     text-align: center;
+    border: gray 1px solid
+}
+
+.save-sandwich-btn {
+    margin-left: 220px;
 }
 
 .bread {
-    background-color: beige
+    background-color: beige;
+    line-height: 50px;
+    border: rgb(199, 179, 144) 1px solid
+}
+
+.bread:first-child {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.bread:last-child {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
